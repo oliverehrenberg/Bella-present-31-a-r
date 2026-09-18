@@ -50,7 +50,7 @@
     .hero { display:grid; grid-template-columns:1fr 1fr; grid-template-areas:'copy gift' 'action gift'; align-content:center; gap:0 24px; min-height:590px; padding:50px 62px; background:var(--peach); border-radius:28px; position:relative; isolation:isolate; }
     .hero-copy { grid-area:copy; align-self:end; }
     .hero-copy .eyebrow { color:#834244; margin-bottom:15px; display:flex; gap:10px; align-items:center; }
-    .little-star { font-size:24px; font-weight:400; color:var(--accent); }
+    svg.little-star { width:24px; height:24px; color:var(--accent); }
     .hero h1 { font-size:clamp(65px,7.2vw,98px); line-height:.99; }
     .hero h1 em { position:relative; }
     .hero-description { margin-top:22px; max-width:345px; font-size:16px; line-height:1.8; }
@@ -61,9 +61,9 @@
     .hero-signature span { color:var(--ink); font-weight:600; }
     .gift-scene { grid-area:gift; align-self:center; position:relative; width:100%; height:465px; border:0; padding:0; background:none; isolation:isolate; }
     .gift-halo { position:absolute; inset:25px -4px 35px; border-radius:50%; background:#f5b8ae; transform:rotate(-12deg); z-index:-1; }
-    .gift-spark { position:absolute; font:40px/1 var(--serif); color:var(--accent); }
+    svg.gift-spark { position:absolute; width:40px; height:40px; color:var(--accent); }
     .spark-one { right:0; top:8px; transform:rotate(13deg); }
-    .spark-two { left:4px; bottom:100px; font-size:27px; }
+    svg.spark-two { left:4px; bottom:100px; width:27px; height:27px; }
     .envelope { position:absolute; width:85%; height:240px; left:7.5%; bottom:58px; background:#da797e; border-radius:10px; box-shadow:0 20px 32px #994e4930; transform:rotate(5deg); transition:transform .4s; }
     .gift-card { position:absolute; width:87%; height:305px; left:6.5%; bottom:62px; padding:12px 12px 20px; background:var(--white); box-shadow:0 7px 22px #64233b21; border-radius:4px; transform:rotate(-10deg); transition:transform .5s cubic-bezier(.2,.8,.2,1); }
     .gift-card .photo { height:224px; width:100%; display:block; }
@@ -262,8 +262,8 @@
       .seal strong { font-size:28px; }
       .seal small { font-size:7px; }
       .gift-hint { font-size:16px; }
-      .spark-one { font-size:31px; }
-      .spark-two { left:-10px; bottom:80px; font-size:23px; }
+      svg.spark-one { width:31px; height:31px; }
+      svg.spark-two { left:-10px; bottom:80px; width:23px; height:23px; }
       .promises { gap:10px; margin-top:14px; }
       .promise { padding:15px 10px; gap:9px; font-size:12px; }
       .promise-text small { font-size:10px; }
@@ -300,7 +300,7 @@
       .view { padding-top:3px; }
       .hero { grid-template-columns:1fr; grid-template-areas:'copy' 'gift' 'action'; min-height:0; text-align:center; padding:24px 22px 23px; border-radius:22px; gap:0; }
       .hero-copy .eyebrow { justify-content:center; margin-bottom:10px; font-size:9px; gap:7px; letter-spacing:.1em; }
-      .little-star { font-size:19px; }
+      svg.little-star { width:19px; height:19px; }
       .hero h1 { font-size:clamp(36px,10.6vw,53px); line-height:1.1; }
       .hero h1 br { display:none; }
       .hero-description { font-size:14px; margin:13px auto 0; line-height:1.7; max-width:270px; }
@@ -320,8 +320,8 @@
       .seal strong { font-size:25px; }
       .seal small { font-size:6px; }
       .gift-hint { bottom:0; font-size:14px; }
-      .spark-one { top:0; right:3px; font-size:25px; }
-      .spark-two { bottom:78px; left:0; font-size:23px; }
+      svg.spark-one { top:0; right:3px; width:25px; height:25px; }
+      svg.spark-two { bottom:78px; left:0; width:23px; height:23px; }
       .promises { gap:8px; margin-top:12px; }
       .promise { flex-direction:column; gap:8px; padding:14px 5px; text-align:center; border-radius:13px; font-size:11px; }
       .promise-text small { font-size:10px; display:block; }
@@ -424,6 +424,8 @@
 </head>
 <body>
   <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-starburst" viewBox="0 0 24 24"><path d="M12 1v22M1 12h22M4.22 4.22l15.56 15.56M4.22 19.78 19.78 4.22" stroke-linecap="butt"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2c1.5 6.5 3.5 8.5 10 10-6.5 1.5-8.5 3.5-10 10C10.5 15.5 8.5 13.5 2 12c6.5-1.5 8.5-3.5 10-10Z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
     <symbol id="i-left" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></symbol>
     <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
@@ -450,13 +452,13 @@
     <section class="view" id="presenten" aria-labelledby="home-title">
       <div class="hero">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> 31 år. Och så värd en paus.</p>
+          <p class="eyebrow"><svg class="icon little-star" aria-hidden="true"><use href="#i-starburst"/></svg> 31 år. Och så värd en paus.</p>
           <h1 id="home-title" tabindex="-1">Grattis, <br><em>Bella!</em></h1>
           <p class="hero-description">En liten semester för dig och David.<br>Barnvakten? Den tar vi. ♡</p>
         </div>
         <button class="gift-scene" id="gift-envelope" type="button" aria-label="Öppna kuvertet till Bella">
           <span class="gift-halo" aria-hidden="true"></span>
-          <span class="gift-spark spark-one" aria-hidden="true">✳</span><span class="gift-spark spark-two" aria-hidden="true">✧</span>
+          <svg class="icon gift-spark spark-one" aria-hidden="true"><use href="#i-starburst"/></svg><svg class="icon gift-spark spark-two" aria-hidden="true"><use href="#i-sparkle"/></svg>
           <span class="envelope" aria-hidden="true">
             <span class="gift-card"><span class="photo" data-place="Skellefteå"><img src="https://www.elite.se/globalassets/images/vana-spa/skelleftea/l1660893-3.jpg" alt="" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" draggable="false"></span><span class="gift-card-caption">En natt. Bara ni två.</span></span>
             <span class="envelope-front"></span>
