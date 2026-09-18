@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f0">
+  <meta name="description" content="Grattis på 31-årsdagen, Bella! Öppna din present, upptäck fem resmål och välj en liten semester för er två. Från Oliver och Mamma.">
+  <title>Bella, en liten semester väntar ♡</title>
+  <style>
+    :root { --paper:#fff8f0; --ink:#492d34; --muted:#7c5c60; --accent:#b7394c; --peach:#f8d6b9; --pink:#f7dce1; --line:#e9cbd0; --white:#fffdfa; --serif:Georgia,'Times New Roman',serif; --sans:'Avenir Next',Avenir,'Segoe UI',sans-serif; }
+    * { box-sizing:border-box; }
+    [hidden] { display:none!important; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 var(--sans); }
+    body:has(dialog[open]) { overflow:hidden; }
+    button,input,textarea { font:inherit; }
+    button,a { -webkit-tap-highlight-color:transparent; }
+    button { color:inherit; cursor:pointer; touch-action:manipulation; }
+    a { color:inherit; text-underline-offset:4px; }
+    button:focus-visible,a:focus-visible,textarea:focus-visible,[tabindex="0"]:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+    h1,h2,h3,p,figure { margin:0; }
+    h1,h2,h3 { font:400 1em/1.1 var(--serif); }
+    h1,h2 { letter-spacing:-.045em; }
+    h1 em,h2 em { color:var(--accent); font-weight:400; }
+    svg.icon { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
+    .sprite { position:absolute; width:0; height:0; overflow:hidden; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .shell { width:min(1200px,calc(100% - 72px)); margin-inline:auto; }
+    .eyebrow { font-size:11px; text-transform:uppercase; letter-spacing:.14em; font-weight:600; line-height:1.6; }
+    .muted { color:var(--muted); }
+    .site-header { min-height:91px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; }
+    .brand-mark { display:grid; place-items:center; width:42px; height:42px; background:var(--accent); color:white; border-radius:15px 15px 15px 3px; transform:rotate(-7deg); font:italic 29px/1 var(--serif); }
+    .brand-text { font-size:11px; font-weight:600; letter-spacing:.05em; line-height:1.45; }
+    .brand-text small { font-size:10px; font-weight:400; color:var(--muted); }
+    .top-nav { display:flex; gap:5px; padding:5px; background:#f8e9e4; border-radius:50px; }
+    .top-nav a { min-height:40px; display:flex; align-items:center; padding:7px 17px; border-radius:30px; font-size:13px; text-decoration:none; transition:background .2s; }
+    .top-nav a[aria-current="page"] { background:var(--white); color:var(--accent); box-shadow:0 2px 6px #6b263d0c; font-weight:600; }
+    .top-nav a:hover { background:#fffdfa99; }
+    .nav-choice { gap:7px; }
+    .choice-dot { width:6px; height:6px; background:var(--accent); border-radius:50%; }
+    main { min-height:calc(100svh - 163px); }
+    .view { padding-top:8px; animation:arrive .35s ease both; }
+    .btn { min-height:53px; border:1px solid transparent; display:inline-flex; align-items:center; justify-content:center; gap:14px; padding:13px 23px; border-radius:50px; font-size:14px; font-weight:600; text-decoration:none; background:var(--accent); color:var(--white); transition:background .2s,transform .2s,box-shadow .2s; }
+    .btn:hover { background:#962d3d; transform:translateY(-2px); box-shadow:0 7px 17px #9f354426; }
+    .btn-outline { border-color:#dcb6bd; background:transparent; color:var(--accent); }
+    .btn-outline:hover { background:var(--pink); color:var(--accent); box-shadow:none; }
+    .text-button { padding:10px 0; min-height:42px; border:0; background:none; font-size:13px; display:inline-flex; align-items:center; gap:8px; text-decoration:underline; text-underline-offset:5px; }
+    .icon-button { width:45px; height:45px; border:1px solid var(--line); border-radius:50%; background:var(--white); display:inline-flex; align-items:center; justify-content:center; padding:0; }
+    .icon-button:hover { background:var(--pink); }
+    .hero { display:grid; grid-template-columns:1fr 1fr; grid-template-areas:'copy gift' 'action gift'; align-content:center; gap:0 24px; min-height:590px; padding:50px 62px; background:var(--peach); border-radius:28px; position:relative; isolation:isolate; }
+    .hero-copy { grid-area:copy; align-self:end; }
+    .hero-copy .eyebrow { color:#834244; margin-bottom:15px; display:flex; gap:10px; align-items:center; }
+    .little-star { font-size:24px; font-weight:400; color:var(--accent); }
+    .hero h1 { font-size:clamp(65px,7.2vw,98px); line-height:.99; }
+    .hero h1 em { position:relative; }
+    .hero-description { margin-top:22px; max-width:345px; font-size:16px; line-height:1.8; }
+    .hero-action { grid-area:action; align-self:start; margin-top:25px; }
+    .hero-cta { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+    .handwritten { font:italic 21px/1.4 var(--serif); color:var(--accent); }
+    .hero-signature { margin-top:20px; font-size:12px; color:var(--muted); }
+    .hero-signature span { color:var(--ink); font-weight:600; }
+    .gift-scene { grid-area:gift; align-self:center; position:relative; width:100%; height:465px; border:0; padding:0; background:none; isolation:isolate; }
+    .gift-halo { position:absolute; inset:25px -4px 35px; border-radius:50%; background:#f5b8ae; transform:rotate(-12deg); z-index:-1; }
+    .gift-spark { position:absolute; font:40px/1 var(--serif); color:var(--accent); }
+    .spark-one { right:0; top:8px; transform:rotate(13deg); }
+    .spark-two { left:4px; bottom:100px; font-size:27px; }
+    .envelope { position:absolute; width:85%; height:240px; left:7.5%; bottom:58px; background:#da797e; border-radius:10px; box-shadow:0 20px 32px #994e4930; transform:rotate(5deg); transition:transform .4s; }
+    .gift-card { position:absolute; width:87%; height:305px; left:6.5%; bottom:62px; padding:12px 12px 20px; background:var(--white); box-shadow:0 7px 22px #64233b21; border-radius:4px; transform:rotate(-10deg); transition:transform .5s cubic-bezier(.2,.8,.2,1); }
+    .gift-card .photo { height:224px; width:100%; display:block; }
+    .gift-card-caption { display:block; margin-top:13px; font:italic 18px/1.3 var(--serif); text-align:center; }
+    .envelope-front { position:absolute; inset:0; background:#ee9b9c; clip-path:polygon(0 0,50% 49%,100% 0,100% 100%,0 100%); border-radius:8px; }
+    .envelope-front:after { content:''; position:absolute; inset:0; background:#f5b1ad; clip-path:polygon(0 100%,50% 42%,100% 100%); }
+    .envelope-label { position:absolute; bottom:24px; left:27px; text-align:left; transform:rotate(-5deg); font:italic 30px/1.2 var(--serif); }
+    .envelope-label small { display:block; font:10px/1.7 var(--sans); margin-top:5px; letter-spacing:.07em; }
+    .seal { position:absolute; width:75px; height:75px; top:89px; right:28px; display:flex; flex-direction:column; justify-content:center; align-items:center; border-radius:50%; background:var(--accent); color:white; box-shadow:0 0 0 5px #b7394c22,inset 0 0 0 3px #d16b75; transform:rotate(10deg); }
+    .seal strong { font:37px/1.1 var(--serif); }
+    .seal small { font:8px/1.6 var(--sans); letter-spacing:.11em; text-transform:uppercase; }
+    .gift-hint { position:absolute; bottom:0; left:0; right:0; text-align:center; font:italic 19px/1.3 var(--serif); color:#873946; transform:rotate(-3deg); }
+    .gift-scene:hover .gift-card,.gift-scene:focus-visible .gift-card { transform:translateY(-20px) rotate(-7deg); }
+    .gift-scene:hover .envelope { transform:rotate(2deg); }
+    .gift-scene:active .envelope { transform:rotate(0) scale(.97); }
+    .photo { position:relative; background:#f1dfd5; overflow:hidden; }
+    .photo img { width:100%; height:100%; display:block; object-fit:cover; }
+    .photo.image-error { display:flex; align-items:center; justify-content:center; padding:25px; background:var(--pink); }
+    .photo.image-error:after { content:attr(data-place) ' · Bilden kunde inte laddas'; color:var(--ink); font:italic 22px/1.5 var(--serif); text-align:center; }
+    .photo.image-error img { display:none; }
+    .promises { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:20px 0 0; }
+    .promise { display:flex; align-items:center; justify-content:center; gap:13px; padding:20px 12px; background:#f7e3e5; border-radius:16px; font-size:14px; }
+    .promise:nth-child(2) { background:#f6eacd; }
+    .promise:nth-child(3) { background:#e8ecd9; }
+    .promise .icon { color:var(--accent); width:26px; height:26px; }
+    .promise-text { line-height:1.5; }
+    .promise-text strong { display:block; font-weight:600; }
+    .promise-text small { font-size:12px; color:var(--muted); }
+    .site-footer { min-height:72px; display:flex; justify-content:space-between; align-items:center; gap:15px; font-size:11px; color:var(--muted); }
+    .site-footer button { font-size:11px; }
+    .explore-heading { display:flex; justify-content:space-between; align-items:end; gap:20px; margin:15px 0 24px; }
+    .explore-heading h1 { font-size:47px; margin-top:8px; }
+    .compare-trigger { white-space:nowrap; font-size:13px; min-height:46px; padding:10px 18px; gap:9px; }
+    .count { display:inline-grid; place-items:center; font-size:11px; height:23px; min-width:23px; border-radius:50%; background:var(--accent); color:white; }
+    .dest-nav { position:relative; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px; margin-bottom:20px; }
+    .dest-tab { position:relative; min-width:0; display:flex; align-items:center; gap:11px; text-align:left; border:1px solid var(--line); border-radius:14px; background:var(--white); padding:10px; transition:background .2s,border-color .2s; }
+    .dest-tab .photo { width:43px; height:43px; border-radius:8px; flex-shrink:0; }
+    .dest-tab .photo.image-error { padding:0; }
+    .dest-tab .photo.image-error:after { content:'♡'; font-size:20px; }
+    .tab-number { display:block; color:var(--muted); font-size:9px; letter-spacing:.1em; }
+    .tab-place { font-size:13px; font-weight:600; }
+    .dest-tab[aria-current="true"] { background:var(--pink); border-color:var(--accent); color:var(--accent); box-shadow:0 0 0 1px var(--accent); }
+    .dest-tab:hover { background:#fbe9e8; border-color:var(--accent); }
+    .tab-heart { position:absolute; right:6px; top:1px; font-size:12px; color:var(--accent); }
+    .destination-stage { display:grid; grid-template-columns:1fr 1fr; border:1px solid #ead7c7; border-radius:24px; background:var(--white); box-shadow:0 10px 25px #80413608; }
+    .stage-visual { display:flex; flex-direction:column; min-width:0; padding:14px; }
+    .stage-photo { height:425px; border-radius:14px; touch-action:pan-y; user-select:none; cursor:grab; }
+    .stage-photo:active { cursor:grabbing; }
+    .photo-tag { position:absolute; top:17px; left:17px; z-index:1; padding:7px 13px; border-radius:30px; background:var(--white); font-size:11px; font-weight:600; }
+    .favorite-button { position:absolute; right:14px; top:14px; border:0; color:var(--accent); z-index:1; }
+    .favorite-button[aria-pressed="true"] { background:var(--accent); color:white; }
+    .favorite-button[aria-pressed="true"] .icon { fill:currentColor; }
+    .stage-bottom { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:13px; }
+    .pagination { display:flex; align-items:center; gap:11px; }
+    .pagination .icon-button { width:44px; height:44px; border-color:#edc5c9; color:var(--accent); }
+    .page-counter { font-size:12px; font-weight:600; white-space:nowrap; font-variant-numeric:tabular-nums; }
+    .swipe-note { font-size:12px; color:var(--muted); }
+    .credit { font-size:10px; color:var(--muted); margin-top:9px; }
+    .credit a { text-decoration:none; }
+    .credit a:hover { text-decoration:underline; }
+    .destination-copy { min-width:0; padding:32px 36px; display:flex; flex-direction:column; background:#fff2e7; border-radius:0 24px 24px 0; }
+    .travel { display:flex; align-items:center; gap:7px; color:var(--muted); font-size:12px; }
+    .travel .icon { width:17px; height:17px; }
+    .destination-copy h2 { font-size:clamp(43px,4.2vw,59px); margin-top:18px; }
+    .destination-copy h2 span { color:var(--accent); font-style:italic; }
+    .hotel-name { font-size:14px; font-weight:600; margin-top:15px; }
+    .detail-tabs { display:flex; width:fit-content; gap:3px; padding:4px; margin:23px 0 16px; background:#f5dfd7; border-radius:50px; }
+    .detail-tabs button { min-height:40px; padding:8px 16px; background:none; border:0; border-radius:30px; font-size:13px; color:var(--muted); }
+    .detail-tabs button[aria-selected="true"] { background:var(--white); color:var(--ink); box-shadow:0 2px 5px #6d38340c; }
+    .detail-panel { min-height:134px; font-size:15px; line-height:1.75; }
+    .detail-panel p + p { margin-top:13px; }
+    .detail-panel .note { font-size:12px; color:var(--muted); }
+    .destination-actions { display:flex; align-items:center; gap:17px; flex-wrap:wrap; margin-top:auto; padding-top:22px; }
+    .external-link { display:inline-flex; align-items:center; gap:4px; font-size:12px; text-decoration:none; }
+    .external-link:hover { text-decoration:underline; }
+    .external-link .icon { width:16px; height:16px; }
+    .explore-note { display:flex; align-items:center; justify-content:space-between; gap:15px; padding:13px 3px 0; color:var(--muted); font-size:12px; }
+    .explore-note span { display:flex; align-items:center; gap:8px; }
+    .explore-note .icon { width:17px; height:17px; color:var(--accent); }
+    .explore-note button { font-size:12px; }
+    dialog { border:1px solid #f1d6d1; padding:0; border-radius:24px; background:var(--paper); color:var(--ink); box-shadow:0 25px 100px #562a3950; max-height:calc(100svh - 40px); width:min(620px,calc(100% - 32px)); overscroll-behavior:contain; }
+    dialog::backdrop { background:#48263280; backdrop-filter:blur(5px); }
+    dialog[open] { animation:letter-in .3s ease both; }
+    .dialog-close { position:absolute; right:14px; top:14px; z-index:2; background:var(--white); }
+    .letter { padding:40px 48px 36px; text-align:center; border-top:12px solid var(--accent); }
+    .letter-icon { display:grid; place-items:center; width:58px; height:58px; margin:0 auto 18px; border-radius:50%; background:var(--pink); color:var(--accent); transform:rotate(-9deg); }
+    .letter-icon .icon { width:28px; height:28px; }
+    .letter h2 { font-size:45px; margin:15px 0 23px; }
+    .letter p { font-size:15px; line-height:1.8; }
+    .letter .eyebrow { font-size:11px; }
+    .letter-included { display:grid; grid-template-columns:repeat(3,1fr); gap:7px; margin:23px 0; font-size:12px; }
+    .letter-included span { padding:12px 8px; background:var(--pink); border-radius:12px; }
+    .letter-included span:nth-child(2) { background:#f8e7bc; }
+    .letter-included span:nth-child(3) { background:#e8ecd9; }
+    .letter .signature { font:italic 24px/1.4 var(--serif); color:var(--accent); margin:19px 0 24px; }
+    .letter .btn { width:100%; }
+    .compare-dialog { width:min(1200px,calc(100% - 40px)); padding:34px; }
+    .compare-dialog h2 { font-size:40px; margin:8px 45px 13px 0; }
+    .compare-intro { font-size:14px; color:var(--muted); }
+    .compare-filters { display:flex; gap:8px; margin:20px 0; }
+    .filter { padding:10px 17px; min-height:44px; border:1px solid var(--line); border-radius:30px; background:transparent; font-size:13px; }
+    .filter[aria-pressed="true"] { color:white; background:var(--accent); border-color:var(--accent); }
+    .compare-grid { display:grid; grid-template-columns:repeat(var(--columns,5),minmax(0,1fr)); gap:13px; }
+    .compare-card { display:flex; flex-direction:column; min-width:0; background:var(--white); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+    .compare-card .photo { height:140px; }
+    .compare-card .photo.image-error { padding:10px; }
+    .compare-card .photo.image-error:after { font-size:16px; }
+    .compare-card-content { display:flex; flex-direction:column; flex:1; padding:16px 14px; }
+    .compare-card h3 { font-size:24px; line-height:1.12; letter-spacing:-.035em; margin:10px 0 15px; min-height:82px; }
+    .compare-card .eyebrow { font-size:10px; }
+    .compare-card dl { flex:1; margin:0 0 18px; font-size:12px; }
+    .compare-card dt { border-top:1px solid #efdfd9; margin-top:10px; padding-top:10px; font-size:10px; color:var(--muted); }
+    .compare-card dd { margin:3px 0 0; }
+    .compare-card .btn { font-size:12px; padding:10px; min-height:45px; gap:5px; }
+    .compare-card .btn .icon { width:18px; height:18px; }
+    .compare-card .text-button { font-size:12px; justify-content:center; }
+    .compare-empty { padding:35px 10px; text-align:center; }
+    .compare-empty p { margin-bottom:17px; font-size:14px; }
+    .compare-footnote { font-size:12px; color:var(--muted); margin-top:20px; }
+    .info-dialog { padding:45px; }
+    .info-dialog h2 { font-size:38px; margin:10px 35px 24px 0; }
+    .info-dialog p { font-size:14px; margin:15px 0; }
+    .sources { display:grid; gap:13px; margin:22px 0; font-size:13px; }
+    .selection-view { padding-block:25px; }
+    .selection-heading { text-align:center; margin:0 auto 28px; }
+    .selection-heading h1 { font-size:55px; margin:12px 0 17px; }
+    .selection-heading p { margin:auto; max-width:550px; font-size:15px; color:var(--muted); }
+    .chosen-ticket { display:grid; grid-template-columns:.95fr 1.05fr; max-width:960px; margin:auto; border:1px solid var(--line); border-radius:23px; overflow:hidden; background:var(--white); box-shadow:0 10px 25px #8041360b; }
+    .chosen-ticket>.photo { min-height:440px; }
+    .ticket-content { padding:32px; background:#fbe7e7; }
+    .ticket-content h2 { font-size:36px; line-height:1.12; margin:12px 0 18px; }
+    .ticket-content p { font-size:14px; }
+    .ticket-content .childcare { margin-top:12px; font-size:12px; color:var(--muted); }
+    .message-label { display:block; font-size:12px; font-weight:600; margin-top:22px; }
+    .choice-message { width:100%; resize:vertical; min-height:101px; background:var(--white); color:var(--ink); border:1px solid var(--line); border-radius:10px; margin-top:8px; padding:13px; font-size:13px; line-height:1.7; }
+    .share-actions { display:flex; gap:9px; flex-wrap:wrap; margin-top:15px; }
+    .share-actions .btn { min-height:46px; font-size:13px; padding:10px 17px; }
+    .selection-after { text-align:center; max-width:640px; margin:23px auto 0; font-size:12px; color:var(--muted); }
+    .selection-after .text-button { margin-top:5px; }
+    .empty-choice { padding:75px 24px; text-align:center; border-radius:24px; background:var(--pink); }
+    .empty-choice h1 { font-size:56px; margin:17px 0 20px; }
+    .empty-choice p { font-size:15px; color:var(--muted); max-width:450px; margin:0 auto 25px; }
+    .toast { position:fixed; bottom:23px; left:50%; transform:translate(-50%,15px); width:max-content; max-width:calc(100% - 32px); background:var(--ink); color:var(--white); padding:14px 22px; border-radius:14px; font-size:13px; opacity:0; pointer-events:none; z-index:10; transition:opacity .2s,transform .2s; box-shadow:0 8px 25px #0002; }
+    .toast.show { opacity:1; transform:translate(-50%,0); }
+    .confetti { position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:9; }
+    .confetti i { position:absolute; top:-20px; width:7px; height:12px; background:var(--accent); animation:fall 1.8s ease-in both; }
+    @keyframes arrive { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+    @keyframes letter-in { from { opacity:0; transform:translateY(25px) scale(.96); } to { opacity:1; transform:none; } }
+    @keyframes fall { to { transform:translate(var(--drift),100svh) rotate(var(--spin)); opacity:0; } }
+    @media (max-width:1050px) {
+      .shell { width:calc(100% - 48px); }
+      .hero { padding:40px; min-height:550px; gap:0 15px; }
+      .hero h1 { font-size:78px; }
+      .hero-description { font-size:15px; }
+      .gift-scene { height:420px; }
+      .envelope { height:215px; width:94%; left:3%; }
+      .gift-card { height:270px; bottom:53px; }
+      .gift-card .photo { height:194px; }
+      .gift-card-caption { font-size:16px; }
+      .seal { width:66px; height:66px; top:72px; right:20px; }
+      .seal strong { font-size:32px; }
+      .envelope-label { font-size:26px; left:20px; bottom:21px; }
+      .hero-cta .handwritten { font-size:17px; }
+      .explore-heading h1 { font-size:41px; }
+      .dest-tab { gap:8px; padding:8px; }
+      .dest-tab .photo { width:36px; height:36px; }
+      .tab-place { font-size:11px; }
+      .destination-copy { padding:28px; }
+      .destination-copy h2 { font-size:45px; }
+      .stage-photo { height:450px; }
+      .swipe-note { font-size:10px; }
+      .destination-actions { gap:13px; }
+      .detail-panel { font-size:14px; }
+      .compare-grid { grid-template-columns:repeat(var(--columns,5),minmax(210px,1fr)); overflow-x:auto; padding:2px 2px 14px; scroll-snap-type:x mandatory; }
+      .compare-card { scroll-snap-align:start; }
+    }
+    @media (max-width:760px) {
+      .shell { width:calc(100% - 32px); }
+      .site-header { min-height:80px; gap:12px; }
+      .brand-text { display:none; }
+      .top-nav a { font-size:12px; padding:7px 14px; }
+      .hero { min-height:500px; padding:30px; grid-template-columns:1fr .9fr; }
+      .hero h1 { font-size:66px; }
+      .hero-copy .eyebrow { font-size:9px; gap:7px; }
+      .hero-description { font-size:14px; }
+      .hero-cta .btn { padding:12px 17px; font-size:13px; gap:10px; }
+      .hero-cta .handwritten { display:none; }
+      .gift-scene { height:355px; }
+      .envelope { height:185px; bottom:43px; }
+      .gift-card { bottom:42px; height:226px; padding:9px 9px 14px; }
+      .gift-card .photo { height:162px; }
+      .gift-card-caption { font-size:13px; margin-top:10px; }
+      .envelope-label { font-size:24px; bottom:17px; left:15px; }
+      .envelope-label small { font-size:8px; }
+      .seal { top:60px; right:15px; width:58px; height:58px; }
+      .seal strong { font-size:28px; }
+      .seal small { font-size:7px; }
+      .gift-hint { font-size:16px; }
+      .spark-one { font-size:31px; }
+      .spark-two { left:-10px; bottom:80px; font-size:23px; }
+      .promises { gap:10px; margin-top:14px; }
+      .promise { padding:15px 10px; gap:9px; font-size:12px; }
+      .promise-text small { font-size:10px; }
+      .promise .icon { width:22px; height:22px; }
+      .explore-heading h1 { font-size:36px; }
+      .explore-heading .eyebrow { font-size:10px; }
+      .compare-trigger { font-size:12px; padding:9px 14px; }
+      .dest-nav { display:flex; overflow-x:auto; padding:2px 2px 8px; margin:0 -2px 12px; gap:9px; }
+      .dest-tab { flex:0 0 143px; }
+      .tab-place { font-size:12px; }
+      .destination-stage { grid-template-columns:1fr; }
+      .stage-visual { padding:13px; }
+      .stage-photo { height:340px; }
+      .stage-bottom { padding-inline:2px; margin-top:11px; }
+      .swipe-note { font-size:11px; }
+      .credit { font-size:9px; }
+      .destination-copy { padding:26px; border-radius:0 0 24px 24px; }
+      .destination-copy h2 { font-size:46px; }
+      .destination-copy h2 br { display:none; }
+      .detail-panel { min-height:112px; font-size:15px; }
+      .destination-actions { padding-top:20px; }
+      .explore-note { align-items:start; font-size:11px; }
+      .explore-note button { font-size:11px; white-space:nowrap; }
+      .chosen-ticket { grid-template-columns:.8fr 1fr; }
+      .ticket-content { padding:24px; }
+      .ticket-content h2 { font-size:31px; }
+    }
+    @media (max-width:560px) {
+      .site-header { min-height:72px; }
+      .brand-mark { width:35px; height:35px; font-size:25px; border-radius:12px 12px 12px 3px; }
+      .top-nav { gap:1px; padding:4px; }
+      .top-nav a { min-height:37px; padding:7px 11px; font-size:11px; }
+      main { min-height:calc(100svh - 137px); }
+      .view { padding-top:3px; }
+      .hero { grid-template-columns:1fr; grid-template-areas:'copy' 'gift' 'action'; min-height:0; text-align:center; padding:24px 22px 23px; border-radius:22px; gap:0; }
+      .hero-copy .eyebrow { justify-content:center; margin-bottom:10px; font-size:9px; gap:7px; letter-spacing:.1em; }
+      .little-star { font-size:19px; }
+      .hero h1 { font-size:clamp(36px,10.6vw,53px); line-height:1.1; }
+      .hero h1 br { display:none; }
+      .hero-description { font-size:14px; margin:13px auto 0; line-height:1.7; max-width:270px; }
+      .hero-action { margin:9px 0 0; }
+      .hero-cta { justify-content:center; }
+      .hero-cta .btn { width:100%; max-width:280px; font-size:14px; min-height:50px; }
+      .hero-signature { font-size:11px; margin-top:12px; }
+      .gift-scene { width:min(290px,100%); height:255px; margin:13px auto 0; }
+      .gift-halo { inset:12px 0 23px; }
+      .envelope { width:85%; left:7.5%; height:152px; bottom:29px; }
+      .gift-card { width:83%; left:8.5%; height:179px; bottom:40px; padding:8px; }
+      .gift-card .photo { height:126px; }
+      .gift-card-caption { font-size:12px; margin-top:8px; }
+      .envelope-label { font-size:22px; bottom:13px; left:18px; }
+      .envelope-label small { font-size:7px; margin-top:3px; }
+      .seal { width:51px; height:51px; top:51px; right:17px; }
+      .seal strong { font-size:25px; }
+      .seal small { font-size:6px; }
+      .gift-hint { bottom:0; font-size:14px; }
+      .spark-one { top:0; right:3px; font-size:25px; }
+      .spark-two { bottom:78px; left:0; font-size:23px; }
+      .promises { gap:8px; margin-top:12px; }
+      .promise { flex-direction:column; gap:8px; padding:14px 5px; text-align:center; border-radius:13px; font-size:11px; }
+      .promise-text small { font-size:10px; display:block; }
+      .promise .icon { width:23px; height:23px; }
+      .site-footer { min-height:65px; font-size:10px; gap:12px; }
+      .site-footer button { font-size:10px; text-align:right; }
+      .explore-heading { margin:15px 0 20px; gap:10px; align-items:center; }
+      .explore-heading h1 { font-size:32px; margin-top:6px; }
+      .explore-heading .eyebrow { font-size:9px; max-width:230px; }
+      .compare-trigger { min-height:44px; padding:9px 12px; font-size:11px; gap:6px; }
+      .compare-trigger>.icon { display:none; }
+      .count { min-width:20px; height:20px; font-size:10px; }
+      .dest-tab { flex-basis:140px; padding:8px; gap:9px; border-radius:12px; }
+      .tab-number { font-size:9px; }
+      .stage-visual { padding:10px; }
+      .stage-photo { height:235px; border-radius:13px; }
+      .stage-bottom { gap:8px; }
+      .swipe-note { font-size:10px; max-width:130px; line-height:1.5; }
+      .pagination { gap:7px; }
+      .page-counter { font-size:11px; }
+      .photo-tag { font-size:10px; top:13px; left:12px; padding:6px 11px; }
+      .favorite-button { right:11px; top:10px; width:42px; height:42px; }
+      .credit { font-size:9px; margin:8px 3px 2px; }
+      .destination-copy { padding:23px 21px 25px; }
+      .travel { font-size:11px; }
+      .destination-copy h2 { font-size:39px; margin-top:14px; line-height:1.08; }
+      .hotel-name { font-size:13px; margin-top:12px; }
+      .detail-tabs { margin:18px 0 14px; }
+      .detail-tabs button { font-size:12px; padding:8px 13px; }
+      .detail-panel { min-height:135px; font-size:14px; line-height:1.75; }
+      .detail-panel .note { font-size:11px; }
+      .destination-actions { gap:14px; padding-top:20px; }
+      .destination-actions .btn { width:100%; min-height:49px; }
+      .destination-actions .external-link { margin:auto; min-height:32px; font-size:12px; }
+      .explore-note { gap:15px; font-size:11px; padding:14px 2px 0; }
+      .explore-note span { max-width:210px; align-items:start; }
+      .explore-note button { white-space:normal; max-width:125px; text-align:right; padding-top:0; }
+      dialog { border-radius:20px; max-height:calc(100svh - 24px); width:calc(100% - 24px); }
+      .dialog-close { width:39px; height:39px; right:11px; top:11px; }
+      .letter { padding:40px 24px 26px; border-top-width:9px; }
+      .letter-icon { width:50px; height:50px; margin-bottom:17px; }
+      .letter h2 { font-size:37px; margin:14px 0 21px; }
+      .letter p { font-size:14px; }
+      .letter .eyebrow { font-size:10px; }
+      .letter-included { gap:6px; font-size:11px; margin:19px 0; }
+      .letter-included span { padding:10px 6px; }
+      .letter .signature { font-size:23px; margin:18px 0 23px; }
+      .letter .btn { font-size:12px; padding:13px 12px; gap:8px; }
+      .compare-dialog { padding:30px 20px 24px; }
+      .compare-dialog h2 { font-size:32px; margin-right:22px; }
+      .compare-intro { font-size:13px; }
+      .compare-grid { grid-template-columns:repeat(var(--columns,5),minmax(247px,1fr)); }
+      .compare-card .photo { height:160px; }
+      .compare-card h3 { min-height:54px; }
+      .compare-card dl { font-size:13px; }
+      .compare-card dt { font-size:11px; }
+      .compare-footnote { font-size:11px; }
+      .info-dialog { padding:45px 25px 25px; }
+      .info-dialog h2 { font-size:32px; }
+      .selection-view { padding-top:24px; }
+      .selection-heading h1 { font-size:41px; }
+      .selection-heading p { font-size:14px; padding-inline:7px; }
+      .chosen-ticket { grid-template-columns:1fr; }
+      .chosen-ticket>.photo { min-height:0; height:215px; }
+      .ticket-content { padding:26px 23px; }
+      .ticket-content h2 { font-size:33px; }
+      .selection-after { font-size:11px; }
+      .empty-choice { padding:45px 23px; }
+      .empty-choice h1 { font-size:44px; }
+      .empty-choice p { font-size:14px; }
+    }
+    @media (max-width:360px) {
+      .hero { padding:21px 18px; }
+      .hero-description { font-size:13px; margin-top:10px; }
+      .gift-scene { height:223px; margin-top:9px; }
+      .envelope { height:131px; bottom:26px; }
+      .gift-card { height:154px; bottom:36px; }
+      .gift-card .photo { height:107px; }
+      .gift-card-caption { font-size:10px; margin-top:7px; }
+      .envelope-label { font-size:19px; left:14px; bottom:12px; }
+      .seal { width:44px; height:44px; top:44px; right:14px; }
+      .seal strong { font-size:21px; }
+      .seal small { font-size:5px; }
+      .gift-hint { font-size:13px; }
+      .hero-signature { font-size:10px; }
+      .top-nav a { padding:7px 9px; }
+      .explore-heading h1 { font-size:29px; }
+      .destination-copy { padding-inline:18px; }
+      .destination-copy h2 { font-size:36px; }
+      .stage-photo { height:210px; }
+      .pagination { gap:5px; }
+      .swipe-note { max-width:113px; font-size:9px; }
+      .promise { font-size:10px; }
+      .promise-text small { font-size:9px; }
+      .share-actions .btn { padding-inline:13px; font-size:12px; }
+    }
+    @media (prefers-reduced-motion:reduce) { *,*:before,*:after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+    @media print { .site-header,.site-footer,dialog,.confetti,.toast,.share-actions,.selection-after,.dest-nav,.stage-bottom,.favorite-button,.destination-actions,.detail-tabs,.compare-trigger,.explore-note,.hero-action { display:none!important; } .shell { width:100%; } main { min-height:0; } .view { animation:none; } .chosen-ticket { break-inside:avoid; } body { background:white; } .photo { print-color-adjust:exact; -webkit-print-color-adjust:exact; } }
+  </style>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><path d="M4 10h16v11H4zM2 6h20v4H2zm10 0v15M12 6C4 8 4 1 7 1c3 0 5 5 5 5Zm0 0c8 2 8-5 5-5-3 0-5 5-5 5Z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14A9 9 0 0 1 10 3a9 9 0 1 0 10.5 11Z"/></symbol>
+    <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M4 8h12v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4ZM16 8h2a3 3 0 1 1 0 6h-2M3 23h16M7 2v2m5-2v2"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 18 6M7 6h11v11"/></symbol>
+    <symbol id="i-compare" viewBox="0 0 24 24"><rect x="3" y="5" width="7" height="15" rx="1"/><rect x="14" y="3" width="7" height="15" rx="1"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 16V2m-5 5 5-5 5 5M5 12H3v9h18v-9h-2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  </svg>
+  <header class="site-header shell">
+    <a class="brand" href="#presenten" aria-label="Bellas present, startsida"><span class="brand-mark" aria-hidden="true">b.</span><span class="brand-text">BELLAS PRESENT<small><br>31 år, hurra för dig!</small></span></a>
+    <nav class="top-nav" aria-label="Huvudmeny">
+      <a href="#presenten" data-nav="presenten" aria-current="page">Din present</a>
+      <a href="#valen" data-nav="valen">Upptäck</a>
+      <a href="#ditt-val" data-nav="ditt-val" class="nav-choice">Ditt val<span id="choice-dot" class="choice-dot" hidden aria-label="Du har gjort ett val"></span></a>
+    </nav>
+  </header>
+  <main class="shell" id="main">
+    <section class="view" id="presenten" aria-labelledby="home-title">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> 31 år. Och så värd en paus.</p>
+          <h1 id="home-title" tabindex="-1">Grattis, <br><em>Bella!</em></h1>
+          <p class="hero-description">En liten semester för dig och David.<br>Barnvakten? Den tar vi. ♡</p>
+        </div>
+        <button class="gift-scene" id="gift-envelope" type="button" aria-label="Öppna kuvertet till Bella">
+          <span class="gift-halo" aria-hidden="true"></span>
+          <span class="gift-spark spark-one" aria-hidden="true">✳</span><span class="gift-spark spark-two" aria-hidden="true">✧</span>
+          <span class="envelope" aria-hidden="true">
+            <span class="gift-card"><span class="photo" data-place="Skellefteå"><img src="https://www.elite.se/globalassets/images/vana-spa/skelleftea/l1660893-3.jpg" alt="" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" draggable="false"></span><span class="gift-card-caption">En natt. Bara ni två.</span></span>
+            <span class="envelope-front"></span>
+            <span class="envelope-label">Till Bella ♡<small>FRÅN OLIVER OCH MAMMA</small></span>
+            <span class="seal"><strong>31</strong><small>hurra!</small></span>
+          </span>
+          <span class="gift-hint" aria-hidden="true">Psst … det finns en paus här inne.</span>
+        </button>
+        <div class="hero-action">
+          <div class="hero-cta"><button class="btn" id="open-gift" type="button"><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg>Öppna din present<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button><span class="handwritten">Bara för dig ♡</span></div>
+          <p class="hero-signature">Med kärlek, <span>Oliver och Mamma</span></p>
+        </div>
+      </div>
+      <div class="promises">
+        <span class="promise"><svg class="icon" aria-hidden="true"><use href="#i-moon"/></svg><span class="promise-text"><strong>En natt borta</strong><small>Bara du och David</small></span></span>
+        <span class="promise"><svg class="icon" aria-hidden="true"><use href="#i-coffee"/></svg><span class="promise-text"><strong>Gott & gott om tid</strong><small>Middag och frukost</small></span></span>
+        <span class="promise"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg><span class="promise-text"><strong>Barnvakten är vår</strong><small>Även över natten</small></span></span>
+      </div>
+    </section>
+    <section class="view" id="valen" aria-labelledby="explore-title" hidden>
+      <div class="explore-heading"><div><p class="eyebrow muted">En natt. Ni två. Fem möjligheter.</p><h1 id="explore-title" tabindex="-1">Välj er lilla <em>semester.</em></h1></div><button class="btn btn-outline compare-trigger" id="compare-open" type="button"><svg class="icon" aria-hidden="true"><use href="#i-compare"/></svg>Jämför<span class="count" id="favorite-count" aria-label="Antal favoriter" hidden>0</span></button></div>
+      <nav class="dest-nav" id="dest-nav" aria-label="Välj resmål"></nav>
+      <div class="destination-stage" aria-roledescription="bildspel" aria-label="De fem resmålen">
+        <div class="stage-visual">
+          <div class="photo stage-photo" id="stage-photo"><img id="destination-image" alt="" draggable="false" decoding="async" referrerpolicy="no-referrer"><span class="photo-tag" id="destination-mood"></span><button class="icon-button favorite-button" id="favorite-toggle" type="button" aria-label="Spara som favorit" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></button></div>
+          <div class="stage-bottom"><span class="swipe-note">Vilken blir er favorit?<br>Svep eller bläddra.</span><div class="pagination"><button class="icon-button" id="previous-destination" type="button" aria-label="Föregående resmål"><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg></button><span class="page-counter" id="page-counter">01 / 05</span><button class="icon-button" id="next-destination" type="button" aria-label="Nästa resmål"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div></div>
+          <p class="credit"><a id="photo-credit" target="_blank" rel="noopener noreferrer"></a></p>
+        </div>
+        <div class="destination-copy" id="destination-copy">
+          <p class="travel"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span id="destination-travel"></span></p>
+          <h2 id="destination-title"></h2><p class="hotel-name" id="destination-name"></p>
+          <div class="detail-tabs" role="tablist" aria-label="Om resmålet"><button type="button" id="feeling-tab" role="tab" aria-controls="feeling-panel" aria-selected="true" tabindex="0">Känslan</button><button type="button" id="included-tab" role="tab" aria-controls="included-panel" aria-selected="false" tabindex="-1">Din present här</button></div>
+          <div class="detail-panel" id="feeling-panel" role="tabpanel" aria-labelledby="feeling-tab" tabindex="0"><p id="destination-description"></p><p class="note" id="destination-note"></p></div>
+          <div class="detail-panel" id="included-panel" role="tabpanel" aria-labelledby="included-tab" tabindex="0" hidden><p id="destination-gift"></p><p class="note">Och vi tar hand om barnvakten, även över natten. Datum väljer vi tillsammans.</p></div>
+          <div class="destination-actions"><button type="button" class="btn" id="choose-destination">Hit vill jag åka<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button><a class="external-link" id="destination-link" target="_blank" rel="noopener noreferrer">Bilder & information<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div>
+        </div>
+      </div>
+      <div class="explore-note"><span><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>Spara hjärtan på det som lockar. Du får ändra dig.</span><button type="button" class="text-button" data-open-letter>Vad ingår i presenten?</button></div>
+    </section>
+    <section class="view selection-view" id="ditt-val" aria-labelledby="selection-title" hidden>
+      <div id="empty-choice" class="empty-choice"><p class="eyebrow muted">Ingen brådska</p><h1 id="empty-title" tabindex="-1">Något att<br><em>längta till.</em></h1><p>Du behöver inte bestämma dig på födelsedagen. Upptäck de fem resmålen och välj det som känns mest som du.</p><a class="btn" href="#valen">Hitta din lilla semester<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <div id="chosen-content" hidden>
+        <div class="selection-heading"><p class="eyebrow muted">Ditt val. Vår planering.</p><h1 id="selection-title" tabindex="-1">Åh, det blir <em>härligt.</em></h1><p>Skicka ditt val till oss. Sedan hittar vi ett datum tillsammans, bokar vistelsen och ordnar barnvakten.</p></div>
+        <div class="chosen-ticket"><div class="photo" id="chosen-photo"><img id="chosen-image" alt="" decoding="async" referrerpolicy="no-referrer"></div><div class="ticket-content"><p class="eyebrow muted" id="chosen-place"></p><h2 id="chosen-name"></h2><p id="chosen-gift"></p><p class="childcare">Barnvakt ingår, även över natten. ♡</p><label for="choice-message" class="message-label">En hälsning att skicka till oss</label><textarea id="choice-message" class="choice-message" readonly rows="3"></textarea><div class="share-actions"><button type="button" class="btn" id="copy-choice"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>Kopiera mitt val</button><button type="button" class="btn btn-outline" id="share-choice" hidden><svg class="icon" aria-hidden="true"><use href="#i-share"/></svg>Dela</button></div></div></div>
+        <div class="selection-after"><p>Valet gör ingen bokning och skickar inget automatiskt.<br>Vi stämmer av upplägget med dig innan något bokas.</p><a href="#valen" class="text-button"><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg>Jag vill titta lite till</a><br><button class="text-button muted" id="clear-choice" type="button">Rensa mitt val</button></div>
+      </div>
+    </section>
+    <noscript><p>Slå på JavaScript för att öppna presenten och bläddra mellan resmålen. Presenten är en natt för er två med middag, frukost och barnvakt. Ni väljer mellan The Wood Hotel, Granö Beckasin, Hotell Lappland, Elite Plaza Örnsköldsvik och KUST Hotell. Oliver och Mamma ordnar det praktiska.</p></noscript>
+  </main>
+  <footer class="site-footer shell"><span>GJORT MED KÄRLEK, FÖR BELLA ♡</span><button type="button" class="text-button" id="info-open">Om presenten & bilderna</button></footer>
+  <dialog id="gift-dialog" aria-labelledby="letter-title">
+    <button type="button" class="icon-button dialog-close" data-close-dialog aria-label="Stäng presentbrevet"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    <div class="letter"><div class="letter-icon" aria-hidden="true"><svg class="icon"><use href="#i-gift"/></svg></div><p class="eyebrow muted">Till Bella, på din 31-årsdag</p><h2 id="letter-title">En stund som<br><em>bara är er.</em></h2><p>Vi vill ge dig och David en liten paus från vardagen. En middag ni kan sitta kvar länge vid, en natt borta och tid tillsammans.</p><div class="letter-included"><span>En natt för två</span><span>Middag & frukost</span><span>Barnvakt hela natten</span></div><p>Fem alternativ väntar. Välj det som känns mest som du – vi ordnar bokning och barnvakt.</p><p class="muted" style="font-size:11px;margin-top:12px">Spa ingår i spaalternativen. Granö är en naturvistelse.<br>Du behöver inte bestämma dig i dag.</p><p class="signature">Med kärlek,<br>Oliver och Mamma</p><button type="button" class="btn" id="start-exploring">Upptäck mina fem resmål<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+  </dialog>
+  <dialog class="compare-dialog" id="compare-dialog" aria-labelledby="compare-title">
+    <button type="button" class="icon-button dialog-close" data-close-dialog aria-label="Stäng jämförelsen"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    <p class="eyebrow muted">Hitta din favorit</p><h2 id="compare-title">Fem sätt att komma bort.</h2><p class="compare-intro">Samma fina present, lite olika känsla. Vad lockar mest?</p>
+    <div class="compare-filters" role="group" aria-label="Vilka resmål vill du jämföra?"><button class="filter" id="compare-all" type="button" aria-pressed="true">Alla fem</button><button class="filter" id="compare-favorites" type="button" aria-pressed="false">Mina favoriter <span id="compare-count">(0)</span></button></div>
+    <div class="compare-grid" id="compare-grid"></div><div class="compare-empty" id="compare-empty" hidden><p>Inga hjärtan ännu. Spara ett resmål som favorit medan du upptäcker alternativen.</p><button class="btn" data-close-dialog type="button">Fortsätt upptäcka<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+    <p class="compare-footnote">Alla alternativ: en natt, middag, frukost och barnvakt för er två. Restiderna är ungefärliga bilresor från Umeå.</p>
+  </dialog>
+  <dialog class="info-dialog" id="info-dialog" aria-labelledby="info-title"><button type="button" class="icon-button dialog-close" data-close-dialog aria-label="Stäng informationen"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button><p class="eyebrow muted">Det praktiska</p><h2 id="info-title">Om presenten & bilderna.</h2><p>Det här är en personlig present från Oliver och Mamma, inte ett köpt presentkort eller en bokningsbekräftelse. Vistelse, datum och detaljer stäms av innan bokning.</p><p>Presenten omfattar de måltider som anges här även där de behöver bokas separat från hotellets grundpaket. Spa ingår i spaalternativen. Granö är en naturvistelse. Det praktiska ordnar Oliver och Mamma.</p><p>Restiderna är ungefärliga bilresor från Umeå. Lägg till pauser och marginal för väglag. Information om anläggningarna kontrollerad den 18 september 2026. Ingen tillgänglighet för ett specifikt datum är bekräftad.</p><div class="sources" id="sources"></div><p>Fotografierna visar miljöer; de utlovar inte viss rumsutsikt, väderlek eller exakt boendekategori. Bilden från Granö visar ett Fågelnäste. Boendekategori väljer vi tillsammans. Alla anläggningar är offentliga miljöer; ingen privat eller exklusiv tillgång utlovas.</p><p>Bilderna laddas från externa bildkällor och kräver internet. Om en bild inte visas kan du följa länken ”Bilder & information” vid resmålet.</p><p>Favoriter och ditt val sparas i den här webbläsaren när lagring är tillgänglig. Inget skickas till oss förrän du själv delar det.</p></dialog>
+  <div class="sr-only" id="destination-announcement" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+  <script>
+    'use strict';
+    const destinations = [
+  {
+    "id": "skelleftea",
+    "place": "Skellefteå",
+    "travel": "Cirka 2 timmar från Umeå",
+    "title": "Högt över<br><span>vardagen.</span>",
+    "name": "The Wood Hotel & Vana Spa",
+    "image": "https://www.elite.se/globalassets/images/vana-spa/skelleftea/l1660893-3.jpg",
+    "alt": "Utomhuspoolen på Vana Spa i Skellefteå i varmt kvällsljus.",
+    "credit": "Foto: Vana Spa / Elite Hotels",
+    "note": "Spa och hotell på samma adress.",
+    "label": "FÖR UTSIKTEN OCH HOTELLKÄNSLAN",
+    "description": "Checka in på The Wood och låt kvällen få ta tid. På 20:e våningen väntar Vana Spa med utomhuspool och utsikt över staden.",
+    "gift": "En natt på The Wood Hotel, entré till Vana Spa, middag och frukost för er två.",
+    "url": "https://www.elite.se/vana-spa/skelleftea/vana-spa-skelleftea/"
+  },
+  {
+    "id": "grano",
+    "place": "Granö",
+    "travel": "Cirka 1 timme från Umeå",
+    "title": "Lite närmare<br><span>naturen.</span>",
+    "name": "Granö Beckasin",
+    "image": "https://granobeckasin.com/wp-content/uploads/2023/09/20190917-g15a1646-1024x683.jpg",
+    "alt": "Ett av Granö Beckasins Fågelnästen bland träd med höstlöv.",
+    "credit": "Foto: Granö Beckasin",
+    "note": "Fotot visar ett Fågelnäste. Boendekategori väljer vi ihop.",
+    "label": "FÖR ÄLVEN, MIDDAGEN OCH LUGNET",
+    "description": "Byt staden mot skog och Umeälven. En god middag, en natt nära naturen och en morgon utan brådska – det här är alternativet utan klassiskt spa.",
+    "gift": "En natt på Granö Beckasin, trerättersmiddag och frukost för er två. Boende väljer vi tillsammans.",
+    "url": "https://granobeckasin.com/erbjudande/tillsammans-paketet/"
+  },
+  {
+    "id": "lycksele",
+    "place": "Lycksele",
+    "travel": "Cirka 2 timmar från Umeå",
+    "title": "En helg<br><span>i badrock.</span>",
+    "name": "Hotell Lappland & Sele Spa Club",
+    "image": "https://static.wixstatic.com/media/f6717b_f54a0ae2be944715928aa615ae3d1428~mv2.jpg",
+    "alt": "Sele Spa Club. Bild publicerad i Hotell Lapplands spagalleri.",
+    "credit": "Foto: Hotell Lappland / Sele Spa Club",
+    "note": "Spatid och datum ordnar vi när du har valt.",
+    "label": "FÖR DIG SOM VILL HA SPA I CENTRUM",
+    "description": "En hel kväll med spa, middag och en bäddad säng som väntar. På Sele Spa Club finns flera pooler och vilorum – ni väljer ert eget tempo.",
+    "gift": "En natt på Hotell Lappland, entré till Sele Spa Club, trerättersmiddag och frukost för er två.",
+    "url": "https://www.hotelllappland.se/sele"
+  },
+  {
+    "id": "ornskoldsvik",
+    "place": "Örnsköldsvik",
+    "travel": "Cirka 1,5 timmar från Umeå",
+    "title": "Ny stad.<br><span>Eget tempo.</span>",
+    "name": "Elite Plaza Hotel & Paradiset Spa",
+    "image": "https://www.elite.se/globalassets/images/hotell/ornskoldsvik/elite-plaza-hotel/oerepo_hotell_4.jpg",
+    "alt": "Elite Plaza Hotel och hamnområdet i Örnsköldsvik.",
+    "credit": "Foto: Elite Hotels",
+    "note": "Hotellet och Paradiset Spa ligger på olika adresser.",
+    "label": "FÖR ETT LITET MILJÖOMBYTE",
+    "description": "Bo vid vattnet på Elite Plaza och besök Paradiset Spa. En middag på kvällen och hotellfrukost nästa morgon gör det till en liten resa för er två.",
+    "gift": "En natt på Elite Plaza, entré till Paradiset Spa, middag och hotellfrukost för er två.",
+    "url": "https://www.elite.se/paket/ornskoldsvik/elite-plaza-hotel/spapaket/"
+  },
+  {
+    "id": "pitea",
+    "place": "Piteå",
+    "travel": "Cirka 2,5–3 timmar från Umeå",
+    "title": "Lite längre bort.<br><span>Lite mer helg.</span>",
+    "name": "KUST Hotell & Spa",
+    "image": "https://scanmagazine.co.uk/content/uploads/2026/05/KUST-Hotell_spakvall.jpg",
+    "alt": "Två gäster vid kanten av KUST Hotells utomhuspool med utsikt över vattnet.",
+    "credit": "Foto: KUST Hotell & Spa, via Scan Magazine",
+    "note": "Det längsta av våra fem alternativ.",
+    "label": "FÖR DIG SOM VILL KOMMA IVÄG LITE LÄNGRE",
+    "description": "Några extra mil och ett nytt ställe att landa på. KUST har spa på åttonde våningen med pooler på terrassen, och hotellnatten ger tid att stanna kvar.",
+    "gift": "En natt på KUST, bokad spaentré, middag och frukost för er två. Vi stämmer av spaupplägget tillsammans.",
+    "url": "https://www.hotellkust.se/spa/"
+  }
+];
+    const moods = ['Utsikt & spa', 'Skog & stillhet', 'En helg i badrock', 'Stad & spa', 'Lite längre bort'];
+    const comparison = [
+      {time:'Cirka 2 timmar',spa:'Vana Spa, på hotellet',dinner:'Middag',detail:'Utomhuspool på 20:e våningen.'},
+      {time:'Cirka 1 timme',spa:'Naturvistelse, utan spa',dinner:'Trerättersmiddag',detail:'Boendekategori väljer vi tillsammans.'},
+      {time:'Cirka 2 timmar',spa:'Sele Spa Club',dinner:'Trerättersmiddag',detail:'Flera pooler och vilorum.'},
+      {time:'Cirka 1,5 timmar',spa:'Paradiset Spa',dinner:'Middag',detail:'Hotellet och spaet ligger på olika adresser.'},
+      {time:'Cirka 2,5–3 timmar',spa:'KUST Spa',dinner:'Middag',detail:'Spaupplägget stämmer vi av tillsammans.'}
+    ];
+    const $ = id => document.getElementById(id);
+    const validId = id => destinations.some(item => item.id === id);
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const choiceKey = 'oliver_mamma_present_choice';
+    const favoritesKey = 'oliver_mamma_present_favorites';
+    let currentIndex = 0;
+    let currentView = '';
+    let compareMode = 'all';
+    let toastTimeout;
+    let confettiTimeout;
+    let selectedId = null;
+    let favorites = new Set();
+    try {
+      const savedChoice = localStorage.getItem(choiceKey);
+      if (validId(savedChoice)) selectedId = savedChoice;
+      const savedFavorites = JSON.parse(localStorage.getItem(favoritesKey) || '[]');
+      if (Array.isArray(savedFavorites)) favorites = new Set(savedFavorites.filter(validId));
+    } catch { /* Browser privacy settings can disable storage; the current visit remains interactive. */ }
+
+    function icon(name) { return `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`; }
+    function escapeHTML(value) { return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char])); }
+    function showToast(message) {
+      clearTimeout(toastTimeout);
+      $('toast').textContent = message;
+      $('toast').classList.add('show');
+      toastTimeout = setTimeout(() => $('toast').classList.remove('show'), 4200);
+    }
+    function persist(key, value) {
+      try { localStorage.setItem(key, value); }
+      catch { showToast('Ditt val finns kvar under besöket, men webbläsaren kan inte spara det till nästa gång.'); }
+    }
+    function wireImages(root = document) {
+      root.querySelectorAll('.photo img').forEach(img => {
+        img.addEventListener('error', () => img.parentElement.classList.add('image-error'));
+        img.addEventListener('load', () => img.parentElement.classList.remove('image-error'));
+        if (img.getAttribute('src') && img.complete && img.naturalWidth === 0) img.parentElement.classList.add('image-error');
+      });
+    }
+    function setPhoto(imageId, item) {
+      const img = $(imageId);
+      img.parentElement.classList.remove('image-error');
+      img.parentElement.dataset.place = item.place;
+      img.alt = item.alt;
+      img.src = item.image;
+      if (img.complete && img.naturalWidth === 0) img.parentElement.classList.add('image-error');
+    }
+    function celebrate() {
+      clearTimeout(confettiTimeout);
+      $('confetti').replaceChildren();
+      if (reducedMotion.matches) return;
+      const fragment = document.createDocumentFragment();
+      for (let i = 0; i < 32; i++) {
+        const piece = document.createElement('i');
+        piece.style.left = `${Math.random() * 100}%`;
+        piece.style.background = ['#b7394c','#efac47','#8e9e6b','#f2a3b4'][i % 4];
+        piece.style.animationDelay = `${Math.random() * .4}s`;
+        piece.style.setProperty('--drift', `${Math.random() * 140 - 70}px`);
+        piece.style.setProperty('--spin', `${Math.random() * 600 - 300}deg`);
+        fragment.append(piece);
+      }
+      $('confetti').append(fragment);
+      confettiTimeout = setTimeout(() => $('confetti').replaceChildren(), 2400);
+    }
+    function showDetail(which, moveFocus = false) {
+      ['feeling', 'included'].forEach(name => {
+        const active = name === which;
+        $(name + '-tab').setAttribute('aria-selected', String(active));
+        $(name + '-tab').tabIndex = active ? 0 : -1;
+        $(name + '-panel').hidden = !active;
+      });
+      if (moveFocus) $(which + '-tab').focus();
+    }
+    function updateFavorites() {
+      const item = destinations[currentIndex];
+      const saved = favorites.has(item.id);
+      $('favorite-toggle').setAttribute('aria-pressed', String(saved));
+      $('favorite-toggle').setAttribute('aria-label', `${saved ? 'Ta bort' : 'Spara'} ${item.place} ${saved ? 'från favoriter' : 'som favorit'}`);
+      $('favorite-count').textContent = favorites.size;
+      $('favorite-count').hidden = favorites.size === 0;
+      $('favorite-count').setAttribute('aria-label', `${favorites.size} ${favorites.size === 1 ? 'favorit' : 'favoriter'}`);
+      $('compare-count').textContent = `(${favorites.size})`;
+      document.querySelectorAll('.tab-heart').forEach(heart => { heart.hidden = !favorites.has(heart.dataset.favorite); });
+    }
+    function renderDestination(index, announce = true) {
+      currentIndex = (index + destinations.length) % destinations.length;
+      const item = destinations[currentIndex];
+      setPhoto('destination-image', item);
+      $('destination-mood').textContent = moods[currentIndex];
+      $('destination-travel').textContent = item.travel;
+      $('destination-title').innerHTML = item.title.replace('<br>', ' <br>');
+      $('destination-name').textContent = item.name;
+      $('destination-description').textContent = item.description;
+      $('destination-note').textContent = item.note;
+      $('destination-gift').textContent = item.gift;
+      $('destination-link').href = item.url;
+      $('photo-credit').href = item.image;
+      $('photo-credit').textContent = item.credit + ' ↗';
+      $('page-counter').textContent = `${String(currentIndex + 1).padStart(2, '0')} / 05`;
+      document.querySelectorAll('.dest-tab').forEach((button, i) => button.setAttribute('aria-current', String(i === currentIndex)));
+      showDetail('feeling');
+      updateFavorites();
+      if (announce) $('destination-announcement').textContent = `Resmål ${currentIndex + 1} av 5: ${item.name}, ${item.place}.`;
+    }
+    function renderSelection() {
+      const item = destinations.find(destination => destination.id === selectedId);
+      $('empty-choice').hidden = Boolean(item);
+      $('chosen-content').hidden = !item;
+      $('choice-dot').hidden = !item;
+      $('ditt-val').setAttribute('aria-labelledby', item ? 'selection-title' : 'empty-title');
+      if (!item) return;
+      setPhoto('chosen-image', item);
+      $('chosen-place').textContent = item.place + ' · För er två';
+      $('chosen-name').textContent = item.name;
+      $('chosen-gift').textContent = item.gift;
+      $('choice-message').value = `Jag väljer ${item.name} i ${item.place}. Vi hittar ett datum tillsammans!`;
+    }
+    function renderRoute(focus = true) {
+      // Hashes keep destination links and browser back/forward working without a server router.
+      const hash = location.hash.slice(1);
+      const destinationIndex = destinations.findIndex(item => item.id === hash);
+      const view = destinationIndex >= 0 || hash === 'valen' ? 'valen' : hash === 'ditt-val' ? 'ditt-val' : 'presenten';
+      const changedView = currentView !== view;
+      currentView = view;
+      document.querySelectorAll('dialog[open]').forEach(dialog => dialog.close());
+      ['presenten','valen','ditt-val'].forEach(id => { $(id).hidden = id !== view; });
+      document.querySelectorAll('[data-nav]').forEach(link => {
+        if (link.dataset.nav === view) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+      if (view === 'valen') renderDestination(destinationIndex >= 0 ? destinationIndex : currentIndex, focus);
+      if (view === 'ditt-val') renderSelection();
+      if (changedView) window.scrollTo({top:0, behavior:'instant'});
+      if (focus && changedView) {
+        const heading = view === 'presenten' ? 'home-title' : view === 'valen' ? 'explore-title' : selectedId ? 'selection-title' : 'empty-title';
+        $(heading).focus({preventScroll:true});
+      }
+    }
+    function navigate(hash) {
+      // Change views without the browser scrolling to the section's fragment target.
+      if (location.hash !== '#' + hash) history.pushState(null, '', '#' + hash);
+      renderRoute();
+      window.scrollTo({top:0, behavior:'instant'});
+    }
+    function browse(index) {
+      const normalized = (index + destinations.length) % destinations.length;
+      const item = destinations[normalized];
+      // A whole browsing session is one history entry, so Back returns to the gift.
+      history.replaceState(null, '', '#' + item.id);
+      renderDestination(normalized);
+      const button = document.querySelector(`[data-destination="${item.id}"]`);
+      const rail = $('dest-nav');
+      const left = button.offsetLeft - rail.offsetLeft;
+      if (left < rail.scrollLeft || left + button.offsetWidth > rail.scrollLeft + rail.clientWidth) {
+        rail.scrollTo({left:Math.max(0,left - (rail.clientWidth - button.offsetWidth) / 2), behavior:reducedMotion.matches ? 'instant' : 'smooth'});
+      }
+    }
+    function choose(id) {
+      if (!validId(id)) return;
+      selectedId = id;
+      persist(choiceKey, id);
+      renderSelection();
+      navigate('ditt-val');
+      celebrate();
+    }
+    function renderComparison() {
+      const items = destinations.filter(item => compareMode === 'all' || favorites.has(item.id));
+      $('compare-all').setAttribute('aria-pressed', String(compareMode === 'all'));
+      $('compare-favorites').setAttribute('aria-pressed', String(compareMode === 'favorites'));
+      $('compare-empty').hidden = items.length > 0;
+      $('compare-grid').hidden = items.length === 0;
+      $('compare-grid').style.setProperty('--columns', Math.max(1,items.length));
+      $('compare-grid').innerHTML = items.map(item => {
+        const index = destinations.indexOf(item);
+        const details = comparison[index];
+        return `<article class="compare-card"><div class="photo" data-place="${escapeHTML(item.place)}"><img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div><div class="compare-card-content"><p class="eyebrow muted">${escapeHTML(item.place)}</p><h3>${escapeHTML(item.name)}</h3><dl><dt>Från Umeå</dt><dd>${details.time}</dd><dt>Upplevelsen</dt><dd>${details.spa}</dd><dt>På kvällen</dt><dd>${details.dinner}</dd><dt>Bra att veta</dt><dd>${details.detail}</dd></dl><button class="btn" type="button" data-choose="${item.id}">Hit vill jag åka ${icon('arrow')}</button><button class="text-button" type="button" data-discover="${item.id}">Upptäck mer</button></div></article>`;
+      }).join('');
+      wireImages($('compare-grid'));
+    }
+
+    $('dest-nav').innerHTML = destinations.map((item,index) => `<button class="dest-tab" type="button" data-destination="${item.id}" aria-current="${index === 0}" aria-label="Visa ${escapeHTML(item.place)}, resmål ${index+1} av 5"><span class="photo" data-place="${escapeHTML(item.place)}"><img src="${escapeHTML(item.image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span><span><span class="tab-number">0${index+1}</span><span class="tab-place">${escapeHTML(item.place)}</span></span><span class="tab-heart" data-favorite="${item.id}" aria-label="Sparad favorit" hidden>♥</span></button>`).join('');
+    $('sources').innerHTML = destinations.map((item,index) => `<a href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer">0${index+1}. ${escapeHTML(item.name)} ↗</a>`).join('') + '<a href="https://scanmagazine.co.uk/kust-hotel-spa-check-in-at-northern-swedens-design-hotel-for-the-perfect-summer-weekend/" target="_blank" rel="noopener noreferrer">KUST-fotografi: KUST Hotell & Spa, via Scan Magazine ↗</a>';
+    wireImages();
+    renderDestination(0, false);
+    renderSelection();
+    renderRoute(false);
+
+    window.addEventListener('hashchange', () => renderRoute());
+    document.addEventListener('click', event => {
+      const link = event.target.closest('a[href^="#"]');
+      if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      navigate(link.getAttribute('href').slice(1));
+    });
+    ['open-gift', 'gift-envelope'].forEach(id => $(id).addEventListener('click', () => $('gift-dialog').showModal()));
+    document.querySelectorAll('[data-open-letter]').forEach(button => button.addEventListener('click', () => $('gift-dialog').showModal()));
+    $('start-exploring').addEventListener('click', () => {
+      $('gift-dialog').close();
+      navigate('valen');
+      celebrate();
+    });
+    document.querySelectorAll('[data-close-dialog]').forEach(button => button.addEventListener('click', () => button.closest('dialog').close()));
+    document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', event => {
+      if (event.target !== dialog) return;
+      const rect = dialog.getBoundingClientRect();
+      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+    }));
+    $('info-open').addEventListener('click', () => $('info-dialog').showModal());
+    $('dest-nav').addEventListener('click', event => {
+      const button = event.target.closest('[data-destination]');
+      if (button) browse(destinations.findIndex(item => item.id === button.dataset.destination));
+    });
+    $('previous-destination').addEventListener('click', () => browse(currentIndex - 1));
+    $('next-destination').addEventListener('click', () => browse(currentIndex + 1));
+    $('favorite-toggle').addEventListener('click', () => {
+      const item = destinations[currentIndex];
+      if (favorites.has(item.id)) favorites.delete(item.id);
+      else favorites.add(item.id);
+      updateFavorites();
+      showToast(favorites.has(item.id) ? `${item.place} är sparat som favorit ♡` : `${item.place} är borttaget från favoriter.`);
+      persist(favoritesKey, JSON.stringify([...favorites]));
+    });
+    ['feeling','included'].forEach(name => $(name + '-tab').addEventListener('click', () => showDetail(name)));
+    document.querySelector('.detail-tabs').addEventListener('keydown', event => {
+      if (!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
+      event.preventDefault();
+      const name = event.key === 'Home' ? 'feeling' : event.key === 'End' ? 'included' : $('feeling-tab').getAttribute('aria-selected') === 'true' ? 'included' : 'feeling';
+      showDetail(name, true);
+    });
+    $('choose-destination').addEventListener('click', () => choose(destinations[currentIndex].id));
+    $('compare-open').addEventListener('click', () => {
+      compareMode = favorites.size >= 2 ? 'favorites' : 'all';
+      renderComparison();
+      $('compare-dialog').showModal();
+    });
+    $('compare-all').addEventListener('click', () => { compareMode = 'all'; renderComparison(); });
+    $('compare-favorites').addEventListener('click', () => { compareMode = 'favorites'; renderComparison(); });
+    $('compare-grid').addEventListener('click', event => {
+      const choice = event.target.closest('[data-choose]');
+      const discover = event.target.closest('[data-discover]');
+      if (choice) { $('compare-dialog').close(); choose(choice.dataset.choose); }
+      if (discover) {
+        $('compare-dialog').close();
+        browse(destinations.findIndex(item => item.id === discover.dataset.discover));
+        $('destination-title').setAttribute('tabindex', '-1');
+        $('destination-title').focus({preventScroll:true});
+      }
+    });
+    document.addEventListener('keydown', event => {
+      if (currentView !== 'valen' || document.querySelector('dialog[open]') || event.altKey || event.ctrlKey || event.metaKey || event.target.closest('.detail-tabs, [role="tabpanel"], textarea, input, select, [contenteditable="true"]')) return;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+        event.preventDefault();
+        browse(currentIndex + (event.key === 'ArrowRight' ? 1 : -1));
+      }
+    });
+    let swipeStart = null;
+    const swipeSurface = $('stage-photo');
+    swipeSurface.addEventListener('pointerdown', event => {
+      if (!event.isPrimary || event.button !== 0 || event.target.closest('button')) return;
+      swipeStart = {x:event.clientX, y:event.clientY, id:event.pointerId};
+      swipeSurface.setPointerCapture(event.pointerId);
+    });
+    swipeSurface.addEventListener('pointerup', event => {
+      if (!swipeStart || event.pointerId !== swipeStart.id) return;
+      const dx = event.clientX - swipeStart.x;
+      const dy = event.clientY - swipeStart.y;
+      swipeStart = null;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) browse(currentIndex + (dx < 0 ? 1 : -1));
+    });
+    ['pointercancel','lostpointercapture'].forEach(type => swipeSurface.addEventListener(type, () => { swipeStart = null; }));
+    $('clear-choice').addEventListener('click', () => {
+      selectedId = null;
+      persist(choiceKey, '');
+      renderSelection();
+      $('empty-title').focus({preventScroll:true});
+      window.scrollTo({top:0, behavior:'instant'});
+      showToast('Ditt val är rensat. Du kan välja igen när du vill.');
+    });
+    $('copy-choice').addEventListener('click', async () => {
+      if (!selectedId) return;
+      try {
+        await navigator.clipboard.writeText($('choice-message').value);
+        showToast('Kopierat! Skicka ditt val till Oliver eller Mamma.');
+      } catch {
+        $('choice-message').focus();
+        $('choice-message').select();
+        showToast('Texten är markerad. Välj Kopiera för att skicka den till oss.');
+      }
+    });
+    if (typeof navigator.share === 'function') {
+      $('share-choice').hidden = false;
+      $('share-choice').addEventListener('click', async () => {
+        if (!selectedId) return;
+        try { await navigator.share({title:'Mitt presentval', text:$('choice-message').value}); }
+        catch (error) { if (error.name !== 'AbortError') showToast('Det gick inte att dela just nu. Du kan kopiera ditt val i stället.'); }
+      });
+    }
+  </script>
+</body>
+</html>
